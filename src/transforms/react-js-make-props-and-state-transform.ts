@@ -191,8 +191,10 @@ function getInitialStateFromClassDeclaration(
 
     if (initialStateMember && ts.isPropertyDeclaration(initialStateMember) && initialStateMember.initializer) {
         const type = typeChecker.getTypeAtLocation(initialStateMember.initializer)!;
-
-        return typeChecker.typeToTypeNode(type);
+        const typeNode = typeChecker.typeToTypeNode(type);
+        if (typeNode) {
+            return typeNode;
+        }
     }
 
     // Initial state in constructor
@@ -207,7 +209,10 @@ function getInitialStateFromClassDeclaration(
                 ts.isBinaryExpression(statement.expression) &&
                 statement.expression.left.getText() === 'this.state'
             ) {
-                return typeChecker.typeToTypeNode(typeChecker.getTypeAtLocation(statement.expression.right));
+                const typeNode = typeChecker.typeToTypeNode(typeChecker.getTypeAtLocation(statement.expression.right));
+                if (typeNode) {
+                    return typeNode;
+                }
             }
         }
     }
@@ -242,7 +247,10 @@ function getStateLookingForSetStateCalls(
             node.expression.expression.getText().match(/setState/)
         ) {
             const type = typeChecker.getTypeAtLocation(node.expression.arguments[0]);
-            typeNodes.push(typeChecker.typeToTypeNode(type));
+            const typeNode = typeChecker.typeToTypeNode(type);
+            if (typeNode) {
+                typeNodes.push(typeNode);
+            }
         }
     }
 }
