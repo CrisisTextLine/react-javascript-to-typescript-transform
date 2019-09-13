@@ -39,7 +39,7 @@ type MyComponentProps = {
         fontSize: number,
     },
 };
-const MyComponent: React.SFC<MyComponentProps> = () => {
+const MyComponent: React.FC<MyComponentProps> = () => {
     return <div />;
 };
 MyComponent.propTypes = {
