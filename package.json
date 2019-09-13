@@ -15,17 +15,23 @@
         "prebuild": "npm run clean",
         "build": "tsc --pretty",
         "precommit": "lint-staged",
-        "prettier": "prettier --write *.{js,json,css,md,ts,tsx}"
+        "prettier": "prettier --write \"**/*.{js,json,css,md,ts,tsx}\""
     },
     "jest": {
         "transform": {
             ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
         },
         "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-        "moduleFileExtensions": ["ts", "js"]
+        "moduleFileExtensions": [
+            "ts",
+            "js"
+        ]
     },
     "lint-staged": {
-        "*.{js,json,css,md,ts,tsx}": ["node_modules/.bin/prettier --write", "git add"]
+        "*.{js,json,css,md,ts,tsx}": [
+            "node_modules/.bin/prettier --write",
+            "git add"
+        ]
     },
     "bin": "dist/cli.js",
     "author": "Mohsen Azimi <me@azimi.me>",
@@ -36,7 +42,7 @@
         "detect-indent": "^5.0.0",
         "glob": "^7.1.2",
         "lodash": "^4.17.10",
-        "prettier": "^1.12.1",
+        "prettier": "^1.18.2",
         "typescript": "2.8.3"
     },
     "devDependencies": {
@@ -47,7 +53,7 @@
         "@types/jest": "^22.2.3",
         "@types/lodash": "^4.14.109",
         "@types/node": "^10.1.2",
-        "@types/prettier": "^1.12.2",
+        "@types/prettier": "^1.18.2",
         "@types/react": "^16.3.14",
         "dedent": "^0.7.0",
         "husky": "^0.14.3",
