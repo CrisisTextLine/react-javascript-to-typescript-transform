@@ -1,5 +1,5 @@
 import * as React from 'react';
-type MyComponentState = { foo: number, bar: number };
+type MyComponentState = { foo: number; bar: number };
 export default class MyComponent extends React.Component<{}, MyComponentState> {
     render() {
         return <button onClick={this.onclick.bind(this)} />;
@@ -9,7 +9,7 @@ export default class MyComponent extends React.Component<{}, MyComponentState> {
     }
 }
 type AnotherComponentProps = {
-    foo: string,
+    foo: string;
 };
 export class AnotherComponent extends React.Component<AnotherComponentProps, {}> {
     static propTypes = {

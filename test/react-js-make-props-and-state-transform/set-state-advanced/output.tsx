@@ -1,6 +1,6 @@
 import * as React from 'react';
-type MyComponentState = { foo: number, bar: number } & { baz: number } & {
-    something: { big: number, here: string, of: { a: number }[] },
+type MyComponentState = { foo: number; bar: number } & { baz: number } & {
+    something: { big: number; here: string; of: { a: number }[] };
 };
 export default class MyComponent extends React.Component<{}, MyComponentState> {
     render() {

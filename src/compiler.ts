@@ -88,7 +88,7 @@ export function compile(
 export function getPrettierOptions(filePath: string, source: string, options: prettier.Options): prettier.Options {
     const resolvedOptions = prettier.resolveConfig.sync(filePath);
     if (resolvedOptions) {
-        _.defaults(resolvedOptions, options);
+        _.defaults(resolvedOptions, { ...options, filepath: filePath });
         return resolvedOptions;
     }
     const { amount: indentAmount, type: indentType } = detectIndent(source);
@@ -97,6 +97,7 @@ export function getPrettierOptions(filePath: string, source: string, options: pr
     const quotations = getQuotation(source);
 
     _.defaults(Object.assign({}, options), {
+        filepath: filePath,
         tabWidth: indentAmount,
         useTabs: indentType && indentType === 'tab',
         printWidth: sourceWidth,

@@ -1,11 +1,11 @@
 type HelloProps = {
-    message?: string,
+    message?: string;
 };
 const Hello: React.FC<HelloProps> = ({ message }) => {
     return <div>hello {message}</div>;
 };
 type HeyProps = {
-    name: string,
+    name: string;
 };
 const Hey: React.FC<HeyProps> = ({ name }) => {
     return <div>hey, {name}</div>;
