@@ -18,8 +18,8 @@ Transforms React code written in JavaScript to TypeScript.
 ```jsx
 class MyComponent extends React.Component {
     static propTypes = {
-        prop1: React.PropTypes.string.isRequired,
-        prop2: React.PropTypes.number,
+        prop1: PropTypes.string.isRequired,
+        prop2: PropTypes.number,
     };
     constructor() {
         super();

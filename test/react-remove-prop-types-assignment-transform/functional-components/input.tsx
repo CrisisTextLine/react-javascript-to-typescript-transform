@@ -4,4 +4,4 @@ function Foo() {
 
 }
 
-Foo.propTypes = {bar: React.PropTypes.string.isRequired}
+Foo.propTypes = {bar: PropTypes.string.isRequired}

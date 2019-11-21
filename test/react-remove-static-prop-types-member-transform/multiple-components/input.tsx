@@ -4,8 +4,8 @@ class SomeComponent extends React.Component<{
         bar: string;
     }> {
     static propTypes = {
-        foo: React.PropTypes.string,
-        baz: React.PropTypes.string.isRequired,
+        foo: PropTypes.string,
+        baz: PropTypes.string.isRequired,
     };
 }
 
@@ -15,6 +15,6 @@ class AnotherComponent extends React.Component<{
         bar: string;
     }> {
     static propTypes = {
-        baz: React.PropTypes.string.isRequired,
+        baz: PropTypes.string.isRequired,
     };
 }

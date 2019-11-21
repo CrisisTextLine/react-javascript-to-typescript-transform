@@ -13,7 +13,7 @@ type AnotherComponentProps = {
 };
 export class AnotherComponent extends React.Component<AnotherComponentProps, {}> {
     static propTypes = {
-        foo: React.PropTypes.string.isRequired,
+        foo: PropTypes.string.isRequired,
     };
     render() {
         return <div />;

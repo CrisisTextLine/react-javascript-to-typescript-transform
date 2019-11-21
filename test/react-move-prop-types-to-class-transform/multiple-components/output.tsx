@@ -6,18 +6,18 @@ class SomeComponent extends React.Component<
         bar: string;
     }
 > {
-    static propTypes = { foo: React.PropTypes.string };
+    static propTypes = { foo: PropTypes.string };
     render() {
         return null;
     }
 }
-SomeComponent.propTypes = { foo: React.PropTypes.string };
+SomeComponent.propTypes = { foo: PropTypes.string };
 class AnotherComponent extends React.Component<{
     baz: number;
 }> {
-    static propTypes = { baz: React.PropTypes.string };
+    static propTypes = { baz: PropTypes.string };
     render() {
         return null;
     }
 }
-AnotherComponent.propTypes = { baz: React.PropTypes.string };
+AnotherComponent.propTypes = { baz: PropTypes.string };

@@ -7,11 +7,11 @@ const Hey = ({ name }) => {
 }
 
 Hey.propTypes = {
-  message: React.PropTypes.string,
+  message: PropTypes.string,
 }
 
 Hello.propTypes = {
-  message: React.PropTypes.string,
+  message: PropTypes.string,
 }
 
 export default class MyComponent extends React.Component {
@@ -26,7 +26,7 @@ export default class MyComponent extends React.Component {
 
 export class AnotherComponent extends React.Component {
     static propTypes = {
-        foo: React.PropTypes.string.isRequired,
+        foo: PropTypes.string.isRequired,
     };
     render() {
         return <div />;

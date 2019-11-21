@@ -4,7 +4,7 @@ import * as ts from 'typescript';
  * Build props interface from propTypes object
  * @example
  * {
- *   foo: React.PropTypes.string.isRequired
+ *   foo: PropTypes.string.isRequired
  * }
  *
  * becomes
@@ -53,7 +53,7 @@ export function buildInterfaceFromPropTypeObjectLiteral(objectLiteral: ts.Object
 }
 
 /**
- * Turns React.PropTypes.* into TypeScript type value
+ * Turns PropTypes.* into TypeScript type value
  *
  * @param node React propTypes value
  */

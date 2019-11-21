@@ -12,7 +12,7 @@ export default class MyComponent extends React.Component {
 
 export class AnotherComponent extends React.Component {
     static propTypes = {
-        foo: React.PropTypes.string.isRequired,
+        foo: PropTypes.string.isRequired,
     };
     render() {
         return <div />;

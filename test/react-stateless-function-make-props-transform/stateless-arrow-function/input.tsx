@@ -3,5 +3,5 @@ const Hello = ({ message }) => {
 };
 
 Hello.propTypes = {
-  message: React.PropTypes.string,
+  message: PropTypes.string,
 }

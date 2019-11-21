@@ -7,7 +7,7 @@ class SomeComponent extends React.Component<{
         return null;
     }
 }
-SomeComponent.propTypes = { foo: React.PropTypes.string };
+SomeComponent.propTypes = { foo: PropTypes.string };
 
 class AnotherComponent extends React.Component<{
     baz: number;
@@ -16,4 +16,4 @@ class AnotherComponent extends React.Component<{
         return null;
     }
 }
-AnotherComponent.propTypes = { baz: React.PropTypes.string };
+AnotherComponent.propTypes = { baz: PropTypes.string };

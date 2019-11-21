@@ -4,4 +4,4 @@ class SomeComponent extends React.Component<{
         bar: string;
     }> {
 }
-SomeComponent.propTypes = { foo: React.PropTypes.string };
+SomeComponent.propTypes = { foo: PropTypes.string };
