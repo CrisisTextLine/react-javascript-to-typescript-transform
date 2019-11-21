@@ -46,8 +46,8 @@
         "detect-indent": "^5.0.0",
         "glob": "^7.1.2",
         "lodash": "^4.17.10",
-        "prettier": "^1.18.2",
-        "typescript": "3.6.3"
+        "prettier": "^1.19.1",
+        "typescript": "3.7.2"
     },
     "devDependencies": {
         "@types/chalk": "^2.2.0",
