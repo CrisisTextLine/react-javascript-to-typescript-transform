@@ -19,9 +19,8 @@ import {
     reactRemovePropTypesImportTransformFactoryFactory,
     allTransforms,
     compile,
-    TransformFactoryFactory
+    TransformFactoryFactory,
 } from '../src';
-
 
 /** Map between a transform and its test folder */
 const transformToFolderMap: [string, TransformFactoryFactory[]][] = [
@@ -68,7 +67,10 @@ for (const [testFolderName, getFactory] of transformToFolderMap) {
  */
 function stripEmptyLines(s: string) {
     const newLineRegex = /\n|\r\n/;
-    return s.split(newLineRegex).filter((l) => l.trim()).join('\n');
+    return s
+        .split(newLineRegex)
+        .filter(l => l.trim())
+        .join('\n');
 }
 
 /**
@@ -78,7 +80,9 @@ function stripEmptyLines(s: string) {
 function readFile(pathToFile: string) {
     return new Promise<string>((resolve, reject) => {
         fs.readFile(pathToFile, (error, buffer) => {
-            if (error) { return reject(error); }
+            if (error) {
+                return reject(error);
+            }
             resolve(buffer.toString());
         });
     });
@@ -91,8 +95,10 @@ function readFile(pathToFile: string) {
  */
 function writeFile(pathToFile: string, contents: string) {
     return new Promise<string>((resolve, reject) => {
-        fs.writeFile(pathToFile, contents, (error) => {
-            if (error) { return reject(error); }
+        fs.writeFile(pathToFile, contents, error => {
+            if (error) {
+                return reject(error);
+            }
             resolve();
         });
     });

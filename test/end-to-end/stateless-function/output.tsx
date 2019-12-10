@@ -1,5 +1,5 @@
 type HelloProps = {
-    message?: string,
+    message?: string;
 };
 export const Hello: React.FC<HelloProps> = ({ message }) => {
     return <div>hello {message}</div>;

@@ -1,11 +1,11 @@
 type A = {
-    foo: string,
+    foo: string;
 };
 type B = {
-    foo: string | number,
-    bar: number,
+    foo: string | number;
+    bar: number;
 };
 type C = {
-    foo: string | number,
-    bar: number,
+    foo: string | number;
+    bar: number;
 };

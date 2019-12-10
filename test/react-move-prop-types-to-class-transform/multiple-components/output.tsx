@@ -1,10 +1,10 @@
 class SomeComponent extends React.Component<
     {
-        foo: number,
+        foo: number;
     },
     {
-        bar: string,
-    },
+        bar: string;
+    }
 > {
     static propTypes = { foo: React.PropTypes.string };
     render() {
@@ -13,7 +13,7 @@ class SomeComponent extends React.Component<
 }
 SomeComponent.propTypes = { foo: React.PropTypes.string };
 class AnotherComponent extends React.Component<{
-    baz: number,
+    baz: number;
 }> {
     static propTypes = { baz: React.PropTypes.string };
     render() {
