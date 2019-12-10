@@ -10,7 +10,7 @@ export type Factory = ts.TransformerFactory<ts.SourceFile>;
  * @example
  * Before:
  * class SomeComponent extends React.Component<{foo: number;}, {bar: string;}> {}
- * SomeComponent.propTypes = { foo: React.PropTypes.string }
+ * SomeComponent.propTypes = { foo: PropTypes.string }
  *
  * After
  * class SomeComponent extends React.Component<{foo: number;}, {bar: string;}> {}

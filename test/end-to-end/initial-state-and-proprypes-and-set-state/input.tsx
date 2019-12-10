@@ -11,5 +11,5 @@ export default class MyComponent extends React.Component {
 }
 
 MyComponent.propTypes = {
-    baz: React.PropTypes.string.isRequired,
+    baz: PropTypes.string.isRequired,
 }

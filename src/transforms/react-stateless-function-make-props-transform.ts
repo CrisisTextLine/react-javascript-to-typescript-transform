@@ -17,7 +17,7 @@ export type Factory = ts.TransformerFactory<ts.SourceFile>;
  * // const Hello = ({ message }) => <div>hello {message}</div>
  *
  * Hello.propTypes = {
- *   message: React.PropTypes.string,
+ *   message: PropTypes.string,
  * }
  *
  * After:
@@ -30,7 +30,7 @@ export type Factory = ts.TransformerFactory<ts.SourceFile>;
  * }
  *
  * Hello.propTypes = {
- *   message: React.PropTypes.string,
+ *   message: PropTypes.string,
  * }
  */
 export function reactStatelessFunctionMakePropsTransformFactoryFactory(typeChecker: ts.TypeChecker): Factory {

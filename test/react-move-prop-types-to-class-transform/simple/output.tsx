@@ -6,9 +6,9 @@ class SomeComponent extends React.Component<
         bar: string;
     }
 > {
-    static propTypes = { foo: React.PropTypes.string };
+    static propTypes = { foo: PropTypes.string };
     render() {
         return null;
     }
 }
-SomeComponent.propTypes = { foo: React.PropTypes.string };
+SomeComponent.propTypes = { foo: PropTypes.string };

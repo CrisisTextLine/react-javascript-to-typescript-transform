@@ -7,9 +7,9 @@ function Hey({ name }) {
 }
 
 Hey.propTypes = {
-  name: React.PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 }
 
 Hello.propTypes = {
-  message: React.PropTypes.string,
+  message: PropTypes.string,
 }

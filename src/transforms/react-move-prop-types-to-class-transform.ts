@@ -15,19 +15,19 @@ export type Factory = ts.TransformerFactory<ts.SourceFile>;
  * @example
  * Before:
  * class SomeComponent extends React.Component<{foo: number;}, {bar: string;}> {}
- * SomeComponent.propTypes = { foo: React.PropTypes.string }
+ * SomeComponent.propTypes = { foo: PropTypes.string }
  *
  * After
  * class SomeComponent extends React.Component<{foo: number;}, {bar: string;}> {
- *   static propTypes = { foo: React.PropTypes.string }
+ *   static propTypes = { foo: PropTypes.string }
  * }
  *
  * @todo
  * This is not supporting multiple statements for a single class yet
  * ```
  * class SomeComponent extends React.Component<{foo: number;}, {bar: string;}> {}
- * SomeComponent.propTypes = { foo: React.PropTypes.string }
- * SomeComponent.propTypes.bar = React.PropTypes.number;
+ * SomeComponent.propTypes = { foo: PropTypes.string }
+ * SomeComponent.propTypes.bar = PropTypes.number;
  * ```
  */
 export function reactMovePropTypesToClassTransformFactoryFactory(typeChecker: ts.TypeChecker): Factory {

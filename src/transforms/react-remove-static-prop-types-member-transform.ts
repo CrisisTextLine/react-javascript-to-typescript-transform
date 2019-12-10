@@ -11,7 +11,7 @@ export type Factory = ts.TransformerFactory<ts.SourceFile>;
  * Before:
  * class SomeComponent extends React.Component<{foo: number;}, {bar: string;}> {
  *   static propTypes = {
- *      foo: React.PropTypes.number.isRequired,
+ *      foo: PropTypes.number.isRequired,
  *   }
  * }
  *

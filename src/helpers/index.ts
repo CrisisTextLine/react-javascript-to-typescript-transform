@@ -63,7 +63,7 @@ export function isReactHeritageClause(clause: ts.HeritageClause) {
 /**
  * Return true if a statement is a React propType assignment statement
  * @example
- * SomeComponent.propTypes = { foo: React.PropTypes.string };
+ * SomeComponent.propTypes = { foo: PropTypes.string };
  * @param statement
  */
 export function isReactPropTypeAssignmentStatement(statement: ts.Statement): statement is ts.ExpressionStatement {

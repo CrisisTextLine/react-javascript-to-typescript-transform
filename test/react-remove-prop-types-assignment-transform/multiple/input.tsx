@@ -5,12 +5,12 @@ class SomeComponent extends React.Component<{
         bar: string;
     }> {
 }
-SomeComponent.propTypes = { foo: React.PropTypes.string };
-SomeComponent.propTypes.baz = React.PropTypes.string.isRequired;
+SomeComponent.propTypes = { foo: PropTypes.string };
+SomeComponent.propTypes.baz = PropTypes.string.isRequired;
 
 
 class AnotherComponent extends React.Component<{
         lol: number;
     }> {
 }
-AnotherComponent.propTypes = { lol: React.PropTypes.number };
+AnotherComponent.propTypes = { lol: PropTypes.number };
