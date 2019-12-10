@@ -4,8 +4,6 @@
 
 Transforms React code written in JavaScript to TypeScript.
 
-[**🖥 Download the VSCode Extension**](https://marketplace.visualstudio.com/items?itemName=mohsen1.react-javascript-to-typescript-transform-vscode)
-
 ## Features:
 
 -   Proxies `PropTypes` to `React.Component` generic type and removes PropTypes
@@ -74,20 +72,28 @@ class MyComponent extends React.Component<MyComponentProps, MyComponentState> {
 
 ## Usage
 
-### CLI
+### Install and configure
 
-```
-npm install -g react-js-to-ts
-```
+This repo currently needs to be cloned and built directly[\*](#original-project)
+
+1. [Install yarn](https://yarnpkg.com/en/docs/install#mac-stable): `brew install yarn`
+2. `git clone git@github.com:CrisisTextLine/react-javascript-to-typescript-transform.git`
+3. Install dependencies: `yarn install`
+4. Build the package `yarn build`
+5. Set up an alias by adding this to your .bash_profile (or equivalent for a different shell)
+    ```sh
+    react-js-to-ts="node <PATH_TO_CLONED_REPO>/dist/cli.js"
+    ```
+    For `.bash_profile` you should be able to use do this with the following command:
+    ```sh
+    echo "\nalias react-js-to-ts=\"node `pwd`/dist/cli.js\"" >> $HOME/.bash_profile
+    ```
+
+### CLI
 
 ```
 react-js-to-ts my-react-js-file.js
 ```
-
-### VSCode plugin
-
-details
-[Download from VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=mohsen1.react-javascript-to-typescript-transform-vscode#overview)
 
 ## Development
 
@@ -114,3 +120,9 @@ Pass `-t` with transform name and case name space separated to `npm test`
 ```
 npm test -- -t "react-js-make-props-and-state-transform propless-stateless"
 ```
+
+### Original Project
+
+NOTE: The original version of this project had a package installable from npm (`npm install -g react-js-to-ts`). This could then be used like `react-js-to-ts my-react-js-file.js`. Additionally it had a nifty [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=mohsen1.react-javascript-to-typescript-transform-vscode#overview).
+
+Since the original maintainers archived the original fork, we had to fork it to make updates. If we end up making a bunch of valuable updates, maybe we should publish our version somewhere.
